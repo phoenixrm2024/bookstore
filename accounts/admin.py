@@ -7,7 +7,7 @@ from .forms import CustomUserCreationForm, CustomUserChangeForm
 # Register your models here.
 CustomUser = get_user_model()
 class CustomUserAdmin(UserAdmin):
-	add_form = CustomUserCreationForm
+	form_class = CustomUserCreationForm
 	form = CustomUserChangeForm
 	model = CustomUser
 	list_display = [
