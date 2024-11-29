@@ -1,19 +1,9 @@
 <!-- templates/home.html -->
 {% extends "_base.html" %}
+{% load static %}
 {% block title %}Home{% endblock title %}
 
 {% block content %}
   <h1>This is my home page.</h1>
-  {% if user.is_authenticated %}
-    <p>Hi {{ user.email }}!</p>
-  <form method="POST" action="{% url 'logout' %}">
-    {% csrf_token %}
-    {{ form.as_p }}
-  <button type='submit'>Log Out</button>
-    <a href="{% url 'logout' %}">Log Out</a>
-  {% else %}
-    <p>You're not logged in yet</p>
-    <a href="{% url 'login' %}">Log In</a>
-    <a href="{% url 'signup' %}">Sign Up</a>
-  {% endif %}
+  <img class="bookcover" src="{% static 'images/dfp.jpg' %}" alt="Django's Book">
 {% endblock content %}
