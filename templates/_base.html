@@ -32,17 +32,14 @@
           {% if user.is_authenticated %}
           </li>
           <li class="nav-item">
-            <form method="POST" action="{% url 'logout' %}">
-              {% csrf_token %}
-              {{ form.as_p }}
-            <button type='submit'>Log Out</button>
+            <a class="nav-link" href="{% url 'account_logout' %}">Log Out</a>
           </li>
           {% else %}
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'login' %}">Log In</a>
+            <a class="nav-link" href="{% url 'account_login' %}">Log In</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'signup' %}">Sign Up</a>
+            <a class="nav-link" href="{% url 'account_signup' %}">Sign Up</a>
           </li>
           {% endif %}
         </ul>
@@ -54,7 +51,7 @@
   	{% endblock content %}
   </div>
   <!-- Bootstrap JavaScript -->
-  <link src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.css">
+  <link src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
   <!-- JavaScript -->
   <script src="{% static 'js/base.js' %}"></script>
 </body>
