@@ -1,7 +1,9 @@
 <!-- templates/about.html -->
 {% extends "_base.html" %}
+{% load static %}
 {% block title %}About{% endblock title %}
 
 {% block content %}
   <h1>About Page</h1>
+  <img class="bookcover" src="{% static 'images/jb.jpg' %}" alt="Python a7 Django">
 {% endblock content %}
