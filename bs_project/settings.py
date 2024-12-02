@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     # Local apps:
     'accounts.apps.AccountsConfig',
     'pages.apps.PagesConfig',
+    'books.apps.BooksConfig',
 ]
 # django-allauth config:
 LOGIN_REDIRECT_URL = 'home'
