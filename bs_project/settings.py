@@ -149,6 +149,8 @@ STATICFILES_DIRS = [BASE_DIR / 'static']
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 # 'File Storage Engine' for collecting 'Static Files' with the "collectstatic" command:
 STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+MEDIA_URL = '/media/' # URL we can use in our templates for user-uploaded files
+MEDIA_ROOT = BASE_DIR / 'media' # absolute 'file sys. path' to directory for those files
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field

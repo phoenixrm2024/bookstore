@@ -7,3 +7,4 @@ django-crispy-forms==2.3
 crispy-bootstrap5==2024.10
 django-allauth==65.2.0
 environs[django]==11.2.1
+pillow==11.0.0
